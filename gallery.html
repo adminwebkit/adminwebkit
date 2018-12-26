@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/plugins/owl-carousel2/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/plugins/owl-carousel2/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/plugins/photoswipe/dist/photoswipe.css">
+    <link rel="stylesheet" href="assets/plugins/photoswipe/dist/default-skin/default-skin.css">
+
+    <link rel="stylesheet" href="assets/css/adminwebkit.min.css">
+
+    <title>Gallery - AdminWebKit</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito|Open+Sans" rel="stylesheet">  
+    
+  </head>
+  <body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar bg-primary navbar-expand-md">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+        <img src="assets/img/logo-white.png" width="30" height="30" class="d-inline-block align-top mr-1" alt="">
+        <span class="text-white">AdminWebKit</span>
+        </a>
+        <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="fas fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+            <a class="nav-link text-white" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link text-white" href="#">About</a>
+            </li>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown text-white" href="#" id="navbarDropdownMenuNotifications" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-bell"></i>
+                <span class="badge bg-danger align-top">1</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuNotifications">
+                <a class="dropdown-item" href="#"><i class="fas fa-user pr-2"></i> Mike liked a post.</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#"><i class="fas fa-comment pr-2"></i> John commented a post.</a>
+            </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown text-white" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="assets/img/avatar.png" class="user-avatar" alt=""> Menu
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#"><i class="fas fa-envelope pr-2"></i> Inbox</a>
+                <a class="dropdown-item" href="#"><i class="fas fa-user-cog pr-2"></i> Settings</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt pr-2"></i> Logout</a>
+                </div>
+            </li>
+        </ul>
+        <a class="btn btn-success text-white btn-sm mt-2 mb-2" type="button">Call to Action</a>
+        </div>
+    </nav>
+    <!-- end NAVBAR -->
+
+    <!-- HEADER -->
+    <div class="header p-2 mb-4">
+    <div class="container">
+        <div class="row align-items-center">
+        <div class="col">
+            <nav class="nav">
+            <a class="nav-link text-primary" href="index.html"><i class="fas fa-home pr-1"></i> <span>Home</span></a>
+            <a class="nav-link text-primary" href="ui-elements.html"><i class="fas fa-th-large pr-1"></i> <span>UI Elements</span></a>
+            <div class="dropdown bg-white">
+                <a class="btn text-primary dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-file pr-1"></i> Pages
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="forgot.html">Forgot</a>
+                    <a class="dropdown-item" href="login.html">Login</a>
+                    <a class="dropdown-item" href="profile.html">Profile</a>
+                    <a class="dropdown-item" href="register.html">Register</a>
+                    <a class="dropdown-item" href="error.html">Error 404</a>
+                </div>
+            </div>
+            <a class="nav-link text-primary" href="forms.html"><i class="fas fa-check-square pr-1"></i> <span>Forms</span></a>
+            <a class="nav-link text-primary" href="gallery.html"><i class="fas fa-box pr-1"></i> <span>Gallery</span></a>
+            </nav>
+        </div>
+        <div class="col-lg-3 ml-auto">
+            <form class="form-inline">
+            <div class="input-group input-group-sm">
+                <input type="text" class="form-control" placeholder="Search..." aria-label="Search..." aria-describedby="button-addon-search">
+                <div class="input-group-append">
+                <button class="btn btn-secondary" type="button" id="button-addon-search"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            </form>
+        </div>
+        </div>
+    </div>
+    </div>
+    <!-- end HEADER -->
+
+    <!-- BREADCRUMBS -->
+    <div class="container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Page</li>
+        </ol>
+    </nav>
+    </div>
+    <!-- end BREADCRUMBS -->
+
+
+    <!-- GALLERY -->
+    <div class="container mb-4">
+
+        <div class="row">
+            
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                
+                <div class="owl-carousel owl-theme">
+                    <div><img src="assets/img/computer.jpg" class="img-thumbnail"></div>
+                    <div><img src="assets/img/computer.jpg" class="img-thumbnail"></div>
+                    <div><img src="assets/img/computer.jpg" class="img-thumbnail"></div>
+                    <div><img src="assets/img/computer.jpg" class="img-thumbnail"></div>
+                    <div><img src="assets/img/computer.jpg" class="img-thumbnail"></div>
+                    <div><img src="assets/img/computer.jpg" class="img-thumbnail"></div>
+                    <div><img src="assets/img/computer.jpg" class="img-thumbnail"></div>
+                    <div><img src="assets/img/computer.jpg" class="img-thumbnail"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- end GALLERY -->
+
+
+    <!-- GALLERY -->
+    <div class="container mb-4">
+
+        <div class="row">
+            
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                
+                <button class="btn btn-primary" onclick="javascript:openPhotoswipe();">Open Photoswipe</button>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- end GALLERY -->
+   
+
+    <!-- FOOTER -->
+    <footer class="footer bg-white">
+      <div class="container">
+        <span class="text-muted">&copy; 2018 AdminWebKit - All rights reserved.</span>
+      </div>
+    </footer>
+    <!-- end FOOTER -->
+
+    <!-- PHOTOSWIPE -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <div class="pswp__bg"></div>
+
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+
+                <div class="pswp__top-bar">
+
+                    <div class="pswp__counter"></div>
+
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div> 
+                </div>
+
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                </button>
+
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                </button>
+
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- end PHOTOSWIPE -->
+
+    <script src="assets/plugins/jquery-3.3.1.slim.min.js"></script>
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/plugins/owl-carousel2/dist/owl.carousel.min.js"></script>
+    <script src="assets/plugins/photoswipe/dist/photoswipe.min.js"></script>
+    <script src="assets/plugins/photoswipe/dist/photoswipe-ui-default.min.js"></script>
+    <script>
+    
+    $(document).ready(function(){
+
+        $(".owl-carousel").owlCarousel({
+            margin:10,
+            dots: true,
+            items: 3,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:2
+                },
+                1000:{
+                    items:3
+                }
+            }
+        });
+
+    });
+
+    function openPhotoswipe() {
+
+        var pswpElement = document.querySelectorAll('.pswp')[0];
+
+        var items = [
+            {
+                src: 'assets/img/computer.jpg',
+                w: 1920,
+                h: 1080
+            },
+            {
+                src: 'assets/img/computer.jpg',
+                w: 1920,
+                h: 1080
+            }
+        ];
+
+        var options = {
+            index: 0
+        };
+
+        var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+        gallery.init();
+
+    }
+
+    </script>
+
+  </body>
+</html>
