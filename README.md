@@ -1,2 +1,2 @@
 # adminwebkit
-Responsive control panel and admin template built on top of Bootstrap 4.
+Responsive admin panel built on top of Bootstrap 4.
