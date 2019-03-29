@@ -2,6 +2,10 @@
 
 Clean and Responsive Admin Panel Template. Get for free reusable components and high quality UI built on top of Bootstrap 4.
 
+# Author
+
+https://www.emawebdesign.com
+
 # License
 
 MIT LICENSE
