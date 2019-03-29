@@ -65,15 +65,19 @@
     <!-- end NAVBAR -->
 
     <!-- HEADER -->
-    <div class="header p-2 mb-4">
+    <div class="header p-3 mb-4">
     <div class="container">
         <div class="row align-items-center">
-        <div class="col">
-            <nav class="nav">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <nav class="navbar navbar-expand-md rounded">
+            <button class="navbar-toggler btn btn-primary btn-block" type="button" data-toggle="collapse" data-target="#subNavbar" aria-controls="subNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                MENU
+            </button>
+            <div class="collapse navbar-collapse justify-content-sm-center" id="subNavbar">
             <a class="nav-link text-primary" href="index.html"><i class="fas fa-home pr-1"></i> <span>Home</span></a>
             <a class="nav-link text-primary" href="ui-elements.html"><i class="fas fa-th-large pr-1"></i> <span>UI Elements</span></a>
             <div class="dropdown bg-white">
-                <a class="btn text-primary dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link nav-link-menu text-primary dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fas fa-file pr-1"></i> Pages
                 </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -86,17 +90,8 @@
             </div>
             <a class="nav-link text-primary" href="forms.html"><i class="fas fa-check-square pr-1"></i> <span>Forms</span></a>
             <a class="nav-link text-primary" href="gallery.html"><i class="fas fa-box pr-1"></i> <span>Gallery</span></a>
-            </nav>
-        </div>
-        <div class="col-lg-3 ml-auto">
-            <form class="form-inline">
-            <div class="input-group input-group-sm">
-                <input type="text" class="form-control" placeholder="Search..." aria-label="Search..." aria-describedby="button-addon-search">
-                <div class="input-group-append">
-                <button class="btn btn-secondary" type="button" id="button-addon-search"><i class="fas fa-search"></i></button>
-                </div>
             </div>
-            </form>
+            </nav>
         </div>
         </div>
     </div>

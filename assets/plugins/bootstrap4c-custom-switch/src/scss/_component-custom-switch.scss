@@ -1,6 +1,8 @@
 .custom-switch {
   .custom-switch-input {
-    display: none;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
     &,
     &:after,
     &:before,
@@ -43,6 +45,9 @@
       &:before {
         display: none;
       }
+      &.text-hide {
+        top: -.80rem;
+      }
     }
     &:checked + .custom-switch-btn {
       background: $switch-checked-bg;
@@ -77,6 +82,18 @@
       }
       &:checked + .custom-switch-btn {
         background: rgba($switch-checked-bg, $switch-checked-disabled-opacity);
+      }
+    }
+    &:not([disabled]) {
+      &:focus {
+        ~ .custom-switch-btn {
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 0 .25rem rgba(56,123,189,.25);
+        }
+      }
+    }
+    &[required] {
+      ~ .custom-switch-btn {
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 0 .125rem rgba($switch-required-color,.5);
       }
     }
   }
@@ -275,4 +292,11 @@
       }
     }
   }
+}
+
+// Validation
+
+.is-invalid .custom-switch .custom-switch-input ~ .custom-switch-btn,
+.was-validated .custom-switch:invalid .custom-switch-input ~ .custom-switch-btn {
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 0 .25rem rgba($switch-invalid-color,1);
 }

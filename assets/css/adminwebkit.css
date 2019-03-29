@@ -35,6 +35,7 @@ a {
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+  outline: none !important;
 }
 
 a:hover {
@@ -160,10 +161,8 @@ hr {
   border-bottom: 1px solid #cccccc;
 }
 
-@media (max-width: 991.98px) {
-  .header .nav-link span {
-    display: none;
-  }
+.nav-link-menu {
+  cursor: pointer;
 }
 
 .breadcrumb {
@@ -840,6 +839,20 @@ button.bg-white:focus {
 .card-box {
   border: none !important;
   box-shadow: 1px 1px 25px 0 #ccc;
+}
+
+.card-table .form-group {
+  margin-bottom: 0px !important;
+}
+
+.card-table table {
+  margin-bottom: 0px !important;
+}
+
+@media (max-width: 768px) {
+  .card-table input {
+    margin-top: 10px;
+  }
 }
 
 .list-group {
