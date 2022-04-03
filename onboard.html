@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/libs/fontawesome/css/all.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/sign-page.css" rel="stylesheet">
+
+    <title>Admin Web Kit</title>
+  </head>
+  <body class="text-center">
+
+    <main class="onboard">
+
+        <div class="row mb-3 onboard-desktop-control">
+          <div class="col-lg-4 col-md-4 onboard-desktop-control-left">
+            <button class="btn btn-primary btn-lg" data-bs-target="#onboardIndicators" data-bs-slide="prev"><i class="fas fa-arrow-left me-2"></i> PREV</button>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <a href="index.html"><img class="mb-4" src="assets/img/user.jpg" alt="" width="72" height="72"></a>
+            <h1 class="h3 mb-2 fw-normal">WELCOME</h1>
+            <p class="text-muted">Choose your settings for great experience.</p>
+          </div>
+          <div class="col-lg-4 col-md-4 onboard-desktop-control-right">
+            <button class="btn btn-primary btn-lg" data-bs-target="#onboardIndicators" data-bs-slide="next">NEXT <i class="fas fa-arrow-right ms-2"></i></button>
+          </div>
+        </div>
+        
+        <div class="container-fluid text-center">
+        
+          <div id="onboardIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#onboardIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#onboardIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#onboardIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/img/welcome.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/welcome.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/welcome.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#onboardIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#onboardIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+  
+       </div>
+
+        <div class="container">
+          <footer class="py-3 my-4">
+          <p class="text-center text-muted">&copy; 2022 Admin Web Kit - All rights reserved.</p>
+          </footer>
+        </div>
+    </main>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/core.js"></script>
+
+  </body>
+</html>

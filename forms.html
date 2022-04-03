@@ -1,342 +1,435 @@
 <!doctype html>
-<html lang="en">
+<html>
   <head>
-
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-    <link rel="stylesheet" href="assets/plugins/bootstrap4c-custom-switch/dist/css/component-custom-switch.min.css">
-    <link rel="stylesheet" href="assets/plugins/easyautocomplete/dist/easy-autocomplete.min.css">
-    <link rel="stylesheet" href="assets/plugins/select/dist/css/select-theme-default.css">
-    <link rel="stylesheet" href="assets/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
-    <link rel="stylesheet" href="assets/plugins/summernote/summernote-bs4.css">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/libs/fontawesome/css/all.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="assets/css/adminwebkit.min.css">
-
-    <title>Forms - AdminWebKit</title>
-
-    <link href="https://fonts.googleapis.com/css?family=Nunito|Open+Sans" rel="stylesheet">  
-    
+    <title>Admin Web Kit</title>
   </head>
   <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar bg-primary navbar-expand-md">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">
-        <img src="assets/img/logo-white.png" width="30" height="30" class="d-inline-block align-top mr-1" alt="">
-        <span class="text-white">AdminWebKit</span>
-        </a>
-        <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="fas fa-bars"></span>
+    <!-- Navbar -->
+    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="index.html"><img src="assets/img/icon.png" alt="mdo" width="24" height="24" class="d-inline-block align-text-top rounded-circle me-1"> Admin Web Kit</a>
+        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-            <a class="nav-link text-white" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link text-white" href="#">About</a>
-            </li>
-            <li class="nav-item dropdown">
-            <a class="nav-link dropdown text-white" href="#" id="navbarDropdownMenuNotifications" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-bell"></i>
-                <span class="badge bg-danger align-top">1</span>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuNotifications">
-                <a class="dropdown-item" href="#"><i class="fas fa-user pr-2"></i> Mike liked a post.</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#"><i class="fas fa-comment pr-2"></i> John commented a post.</a>
+        <div id="navbar-right" class="container-fluid">
+            <div class="container-fluid">
+                <span class="navbar-text text-white">
+                    Admin template built with Bootstrap 5
+                </span>
             </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown text-white" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img src="assets/img/avatar.png" class="user-avatar" alt=""> Menu
+            <div class="dropdown me-4">
+                <a class="d-block dropdown-toggle link-light text-decoration-none dropdown-toggle" href="#" id="notificationMenu" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-bell"></i></a>
+                <ul class="dropdown-menu dropdown-menu-md-end text-small" aria-labelledby="notificationMenu">
+                    <li><a class="dropdown-item" href="#">Mike likes your video</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li>
+                      <div class="d-flex align-items-center p-3">
+                          <div class="flex-shrink-0">
+                              <a href="#"><img width="48" src="assets/img/user.jpg" alt="User" class="rounded-circle"></a>
+                          </div>
+                          <div class="flex-grow-1 ms-2">
+                              <div class="fw-bold"><a href="#" class="dropdown-item p-0">Mike likes your photo</a></div>
+                              <small class="text-muted">One minutes ago</small>
+                          </div>
+                      </div>
+                    </li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li>
+                      <div>
+                          <div class="fw-bold"><a class="dropdown-item" href="#">Mike likes your post</a></div>
+                          <small class="text-muted ms-3">One minutes ago</small>
+                      </div>
+                    </li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li>
+                      <div>
+                          <div class="fw-bold"><a class="dropdown-item" href="#">Mike likes your post</a></div>
+                          <small class="text-muted ms-3">Two minutes ago</small>
+                      </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="userMenu" class="dropdown">
+                <a href="#" class="d-block link-light text-decoration-none dropdown-toggle" id="menu" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="assets/img/user.jpg" alt="mdo" width="32" height="32" class="rounded-circle me-2"> Admin
                 </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#"><i class="fas fa-envelope pr-2"></i> Inbox</a>
-                <a class="dropdown-item" href="#"><i class="fas fa-user-cog pr-2"></i> Settings</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt pr-2"></i> Logout</a>
-                </div>
-            </li>
-        </ul>
-        <a class="btn btn-success text-white btn-sm mt-2 mb-2" type="button">Call to Action</a>
-        </div>
-    </nav>
-    <!-- end NAVBAR -->
-
-    <!-- HEADER -->
-    <div class="header p-3 mb-4">
-    <div class="container">
-        <div class="row align-items-center">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <nav class="navbar navbar-expand-md rounded">
-            <button class="navbar-toggler btn btn-primary btn-block" type="button" data-toggle="collapse" data-target="#subNavbar" aria-controls="subNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                MENU
-            </button>
-            <div class="collapse navbar-collapse justify-content-sm-center" id="subNavbar">
-            <a class="nav-link text-primary" href="index.html"><i class="fas fa-home pr-1"></i> <span>Home</span></a>
-            <a class="nav-link text-primary" href="ui-elements.html"><i class="fas fa-th-large pr-1"></i> <span>UI Elements</span></a>
-            <div class="dropdown bg-white">
-                <a class="nav-link nav-link-menu text-primary dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-file pr-1"></i> Pages
-                </a>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="forgot.html">Forgot</a>
-                    <a class="dropdown-item" href="login.html">Login</a>
-                    <a class="dropdown-item" href="profile.html">Profile</a>
-                    <a class="dropdown-item" href="register.html">Register</a>
-                    <a class="dropdown-item" href="error.html">Error 404</a>
-                </div>
+                <ul class="dropdown-menu dropdown-menu-md-end text-small" aria-labelledby="menu">
+                    <li><a class="dropdown-item text-primary" href="#"><i class="fas fa-cog me-1"></i> Settings</a></li>
+                    <li><a class="dropdown-item text-primary" href="#"><i class="fas fa-user me-1"></i> Profile</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item text-primary" href="#"><i class="fas fa-sign-out-alt me-1"></i>Sign out</a></li>
+                </ul>
             </div>
-            <a class="nav-link text-primary" href="forms.html"><i class="fas fa-check-square pr-1"></i> <span>Forms</span></a>
-            <a class="nav-link text-primary" href="gallery.html"><i class="fas fa-box pr-1"></i> <span>Gallery</span></a>
-            </div>
-            </nav>
         </div>
-        </div>
-    </div>
-    </div>
-    <!-- end HEADER -->
+    </header>
+    <!-- end Navbar -->
 
-    <!-- BREADCRUMBS -->
-    <div class="container">
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Page</li>
-        </ol>
-    </nav>
-    </div>
-    <!-- end BREADCRUMBS -->
-
-
-    <!-- Forms -->
-    <div class="container mb-4">
-
+    <div class="container-fluid">
         <div class="row">
+
+            <!-- Sidebar -->
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <div class="position-sticky pt-3">
+
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">
+                            <i class="fas fa-home pe-2"></i>
+                            Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="collapse" href="#menuUsers" role="button" aria-expanded="false" aria-controls="menuUsers">
+                            <i class="fab fa-uikit pe-2"></i>
+                            UI Elements <i class="fas fa-caret-down ps-1"></i>
+                            </a>
+                            <div class="collapse" id="menuUsers">
+                                <div class="list-group m-3">
+                                    <a href="alerts.html" class="list-group-item list-group-item-action"><i class="fas fa-exclamation-triangle me-2"></i> Alerts</a>
+                                    <a href="blog.html" class="list-group-item list-group-item-action"><i class="fas fa-rss me-2"></i> Blog</a>
+                                    <a href="box.html" class="list-group-item list-group-item-action"><i class="fas fa-square me-2"></i> Box</a>
+                                    <a href="buttons.html" class="list-group-item list-group-item-action"><i class="fas fa-hand-pointer me-2"></i> Buttons</a>
+                                    <a href="cards.html" class="list-group-item list-group-item-action"><i class="fas fa-address-card me-2"></i> Cards</a>
+                                    <a href="charts.html" class="list-group-item list-group-item-action"><i class="fas fa-chart-bar me-2"></i> Charts</a>
+                                    <a href="code.html" class="list-group-item list-group-item-action"><i class="fas fa-code me-2"></i> Code</a>
+                                    <a href="social.html" class="list-group-item list-group-item-action"><i class="fas fa-thumbs-up me-2"></i> Social</a>
+                                    <a href="table.html" class="list-group-item list-group-item-action"><i class="fas fa-table me-2"></i> Table</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="collapse" href="#menuPages" role="button" aria-expanded="false" aria-controls="menuPages">
+                            <i class="far fa-copy pe-2"></i>
+                            Pages <i class="fas fa-caret-down ps-1"></i>
+                            </a>
+                            <div class="collapse" id="menuPages">
+                                <div class="list-group m-3">
+                                    <a href="contacts.html" class="list-group-item list-group-item-action"><i class="fas fa-envelope me-2"></i> Contacts</a>
+                                    <a href="forgot.html" class="list-group-item list-group-item-action"><i class="fas fa-unlock me-2"></i> Forgot</a>
+                                    <a href="login.html" class="list-group-item list-group-item-action"><i class="fas fa-key me-2"></i> Login</a>
+                                    <a href="onboard.html" class="list-group-item list-group-item-action"><i class="fas fa-user-cog me-2"></i> Onboard</a>
+                                    <a href="landing.html" class="list-group-item list-group-item-action"><i class="fas fa-user-edit me-2"></i> Landing Page</a>
+                                    <a href="register.html" class="list-group-item list-group-item-action"><i class="fas fa-sign-in-alt me-2"></i> Register</a>
+                                    <a href="error404.html" class="list-group-item list-group-item-action"><i class="fas fa-exclamation-circle me-2"></i> Error 404</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
             
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                    <span>Others</span>
+                    </h6>
 
-                <!-- FORM -->
-                <div class="card border-top border-primary mb-4">
-                    <div class="card-header bg-white">
-                        Form
-                    </div>
-                    <div class="card-body">
-
-                        <form>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1" class="text-primary">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1" class="text-primary">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                            </div>
-                            <div class="icheck-primary pb-2">
-                                <input type="checkbox" id="someCheckboxId" />
-                                <label for="someCheckboxId">Click to check</label>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </form>
-
-                    </div>
+                    <ul class="nav flex-column mb-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="forms.html">
+                            <i class="fas fa-edit pe-2"></i>
+                            Forms
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery.html">
+                            <i class="fas fa-images pe-2"></i>
+                            Gallery
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <!-- end FORM -->
-
-            </div>
-
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-
-                <!-- FORM -->
-                <div class="card border-top border-secondary mb-4">
-                    <div class="card-header bg-white">
-                        Form inline
-                    </div>
-                    <div class="card-body">
-
-                        <form>
-                            <div class="form-row mb-2">
-                                <div class="col">
-                                    <input type="text" class="form-control" placeholder="First name">
-                                </div>
-                                <div class="col">
-                                    <input type="text" class="form-control" placeholder="Last name">
-                                </div>
-                            </div>
-                            <div class="form-row mb-2">
-                                <div class="col">
-                                    <div class="icheck-primary">
-                                        <input type="radio" id="someRadioId1" name="someGroupName" />
-                                        <label for="someRadioId1">Option 1</label>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="icheck-primary">
-                                        <input type="radio" id="someRadioId2" name="someGroupName" />
-                                        <label for="someRadioId2">Option 2</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row mb-2">
-                                <div class="col">
-                                    <textarea rows="4" class="form-control" placeholder="Text..."></textarea>
-                                </div>
-                            </div>
-                            <div class="form-row mt-3">
-                                <div class="col">
-                                    <button type="submit" class="btn btn-primary mb-2">Go</button>
-                                </div>
-                            </div>
-                        </form>
-
-                    </div>
-                </div>
-                <!-- end FORM -->
-
-            </div>
-
-        </div>
-
-        <div class="row mt-3">
-            
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-
-                <div class="card mb-3 border-top border-primary">
-                    <div class="card-header bg-white">
-                        Switches
-                    </div>
-                    <div class="card-body">
-
-                        <div class="custom-switch">
-                            <input class="custom-switch-input" id="switch" type="checkbox">
-                            <label class="custom-switch-btn" for="switch"></label>
-                        </div>
+            </nav>
+            <!-- end Sidebar -->
         
-                        <div class="custom-switch custom-switch-label-yesno">
-                            <input class="custom-switch-input" id="switch2" type="checkbox">
-                            <label class="custom-switch-btn" for="switch2"></label>
-                            <div class="custom-switch-content-checked">
-                                I'm checked
-                            </div>
-                            <div class="custom-switch-content-unchecked">
-                                I'm unchecked
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+
+                <!-- Breadcrumb -->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mt-3">
+                        <li class="breadcrumb-item"><a href="index.html" class="text-primary text-decoration-none">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Forms</li>
+                    </ol>
+                </nav>
+                <!-- end Breadcrumb -->
+
+                <div class="row mt-2 mb-2">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <!-- Form1 -->
+                        <div class="card box-shadow2 mb-4">
+                            <div class="card-body p-4">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                                        <input type="password" class="form-control" id="exampleInputPassword1">
+                                    </div>
+                                    <div class="mb-4 mt-4">
+                                        <select class="form-select" aria-label="Select">
+                                            <option selected>Open this select menu</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                        <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                                    </div>
+                                    <div class="form-check form-switch mt-4 mb-4">
+                                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                        <label class="form-check-label" for="flexSwitchCheckDefault">Left or Right</label>
+                                    </div>
+                                    <div class="mb-4 mt-4">
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </div>
+                                    <div class="mb-4 mt-4 text-center">
+                                        <div class="spinner-border text-primary" role="status"></div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
-
+                        <!-- endForm1 -->
                     </div>
-                </div>
-
-            </div>
-
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-
-                <div class="card mb-3 border-top border-primary">
-                    <div class="card-header bg-white">
-                        Autocomplete
-                    </div>
-                    <div class="card-body">
-
-                        <input id="suggest" class="form-control form-control-lg" placeholder="Type color...">
-
-                        <input id="suggest_users" class="form-control form-control-lg mt-3" placeholder="Type user...">
-
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="row mt-3">
-            
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-
-                <div class="card mb-3 border-top border-primary">
-                    <div class="card-header bg-white">
-                        Select
-                    </div>
-                    <div class="card-body">
-
-                        <select class="user-select">
-                            <option value="" selected="selected">Select user...</option>
-                            <option value="mike">Mike</option>
-                            <option value="john">John</option>
-                        </select>
-
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-
-                <div class="card mb-3 border-top border-primary">
-                    <div class="card-header bg-white">
-                        Color Picker
-                    </div>
-                    <div class="card-body">
-
-                        <div id="colorPicker" class="input-group">
-                            <input type="text" class="form-control input-lg" value="#000000"/>
-                            <span class="input-group-append">
-                                <span class="input-group-text colorpicker-input-addon"><i></i></span>
-                            </span>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <!-- Form2 -->
+                        <div class="card box-shadow2 mb-4">
+                            <div class="card-body p-4">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                                        <input type="password" class="form-control" id="exampleInputPassword1">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="formFile" class="form-label">Choose avatar</label>
+                                        <input class="form-control form-control-file" type="file" id="formFile">
+                                    </div>
+                                    <div class="row mb-4 mt-4">
+                                        <div class="col">
+                                            <label  class="form-label">First name</label>
+                                            <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                                        </div>
+                                        <div class="col">
+                                            <label  class="form-label">Last name</label>
+                                            <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+                            </div>
                         </div>
-
+                        <!-- end Form2 -->
                     </div>
                 </div>
 
-            </div>
+                <div class="row mb-2">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <!-- Form3 -->
+                        <div class="card box-shadow2 mb-4">
+                            <div class="card-body p-4">
+                                <form class="row row-cols-lg-auto g-3 align-items-center">
+                                    <div class="col-12">
+                                        <label class="visually-hidden" for="inlineFormInputGroupUsername">Username</label>
+                                        <div class="input-group">
+                                        <div class="input-group-text">@</div>
+                                        <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Username">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-12">
+                                        <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+                                        <select class="form-select" id="inlineFormSelectPref">
+                                        <option selected>Choose...</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+                                        <label class="form-check-label" for="inlineFormCheck">
+                                            Remember me
+                                        </label>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </div>
 
-        </div>
+                                    <div class="col-12">
+                                        <div class="spinner-border text-primary" role="status"></div>
+                                    </div>
 
-        <div class="row mt-3">
-            
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-
-                <div class="card mb-3 border-top border-primary">
-                    <div class="card-header bg-white">
-                        Editor Wysiwyg
-                    </div>
-                    <div class="card-body">
-
-                        <div id="summernote"></div>
-
+                                </form>
+                            </div>
+                        </div>
+                        <!-- end Form3 -->
                     </div>
                 </div>
 
-            </div>
+                <div class="row mb-2">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <!-- Form4 -->
+                        <div class="card box-shadow2 mb-4">
+                            <div class="card-body p-4">
+                                <label for="post" class="form-label">Write post</label>
+                                <textarea class="form-control" id="post" rows="5" placeholder="Type here..."></textarea>
+                                <div class="d-grid mt-3">
+                                    <button class="btn btn-primary" type="button">SUBMIT</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end Form4 -->
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <!-- Form5 -->
+                        <div class="card box-shadow2 mb-4">
+                            <div class="card-body p-4">
+                                <form class="row g-3">
+                                    <div class="col-md-4">
+                                      <label for="validationServer01" class="form-label">First name</label>
+                                      <input type="text" class="form-control is-valid" id="validationServer01" value="Mike" required>
+                                      <div class="valid-feedback">
+                                        Looks good!
+                                      </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                      <label for="validationServer02" class="form-label">Last name</label>
+                                      <input type="text" class="form-control is-valid" id="validationServer02" value="Smith" required>
+                                      <div class="valid-feedback">
+                                        Looks good!
+                                      </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                      <label for="validationServerUsername" class="form-label">Username</label>
+                                      <div class="input-group has-validation">
+                                        <span class="input-group-text" id="inputGroupPrepend3">@</span>
+                                        <input type="text" class="form-control is-invalid" id="validationServerUsername" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
+                                        <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                                          Please choose a username.
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <label for="validationServer03" class="form-label">City</label>
+                                      <input type="text" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" required>
+                                      <div id="validationServer03Feedback" class="invalid-feedback">
+                                        Please provide a valid city.
+                                      </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                      <label for="validationServer04" class="form-label">State</label>
+                                      <select class="form-select is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback" required>
+                                        <option selected disabled value="">Choose...</option>
+                                        <option>One</option>
+                                        <option>Two</option>
+                                      </select>
+                                      <div id="validationServer04Feedback" class="invalid-feedback">
+                                        Please select a valid state.
+                                      </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                      <label for="validationServer05" class="form-label">Zip</label>
+                                      <input type="text" class="form-control is-invalid" id="validationServer05" aria-describedby="validationServer05Feedback" required>
+                                      <div id="validationServer05Feedback" class="invalid-feedback">
+                                        Please provide a valid zip.
+                                      </div>
+                                    </div>
+                                    <div class="col-12">
+                                      <div class="form-check">
+                                        <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
+                                        <label class="form-check-label" for="invalidCheck3">
+                                          Agree to terms and conditions
+                                        </label>
+                                        <div id="invalidCheck3Feedback" class="invalid-feedback">
+                                          You must agree before submitting.
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-12">
+                                      <button class="btn btn-primary" type="submit">Submit form</button>
+                                    </div>
+                                  </form>
+                            </div>
+                        </div>
+                        <!-- end Form5 -->
+                    </div>
+                </div>
+
+                <div class="row mb-2">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <!-- Form6 -->
+                        <div class="card box-shadow2 mb-4">
+                            <div class="card-body p-4">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">1</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">2</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                    <label class="form-check-label" for="inlineRadio3">3</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end Form6 -->
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <!-- Form7 -->
+                        <div class="card box-shadow2 mb-4">
+                            <div class="card-body p-4">
+                                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="btnradio1">Radio 1</label>
+                                
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="btnradio2">Radio 2</label>
+                                
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="btnradio3">Radio 3</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end Form7 -->
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <div class="container">
+                    <footer class="py-3 my-4">
+                    <ul class="nav justify-content-center border-top border-bottom pt-3 mt-3 pb-3 mb-3">
+                        <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Home Page</a></li>
+                    </ul>
+                    <p class="text-center text-muted">&copy; 2022 Admin Web Kit - All rights reserved.</p>
+                    </footer>
+                </div>
+                <!-- end Footer -->
+
+            </main>
 
         </div>
-
     </div>
-    <!-- Forms -->
-   
 
-    <!-- FOOTER -->
-    <footer class="footer bg-white">
-      <div class="container">
-        <span class="text-muted">&copy; 2018 AdminWebKit - All rights reserved.</span>
-      </div>
-    </footer>
-    <!-- end FOOTER -->
-
-    <script type="text/javascript" src="assets/plugins/jquery-3.3.1.slim.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/popper.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/easyautocomplete/dist/jquery.easy-autocomplete.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/tether/dist/js/tether.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/select/dist/js/select.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/summernote/summernote-bs4.min.js"></script>
-    <script type="text/javascript" src="assets/js/adminwebkit-forms.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/core.js"></script>
 
   </body>
 </html>

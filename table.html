@@ -1,0 +1,358 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/libs/fontawesome/css/all.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <title>Admin Web Kit</title>
+  </head>
+  <body>
+
+    <!-- Navbar -->
+    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="index.html"><img src="assets/img/icon.png" alt="mdo" width="24" height="24" class="d-inline-block align-text-top rounded-circle me-1"> Admin Web Kit</a>
+        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div id="navbar-right" class="container-fluid">
+            <div class="container-fluid">
+                <span class="navbar-text text-white">
+                    Admin template built with Bootstrap 5
+                </span>
+            </div>
+            <div class="dropdown me-4">
+                <a class="d-block dropdown-toggle link-light text-decoration-none dropdown-toggle" href="#" id="notificationMenu" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-bell"></i></a>
+                <ul class="dropdown-menu dropdown-menu-md-end text-small" aria-labelledby="notificationMenu">
+                    <li><a class="dropdown-item" href="#">Mike likes your video</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li>
+                      <div class="d-flex align-items-center p-3">
+                          <div class="flex-shrink-0">
+                              <a href="#"><img width="48" src="assets/img/user.jpg" alt="User" class="rounded-circle"></a>
+                          </div>
+                          <div class="flex-grow-1 ms-2">
+                              <div class="fw-bold"><a href="#" class="dropdown-item p-0">Mike likes your photo</a></div>
+                              <small class="text-muted">One minutes ago</small>
+                          </div>
+                      </div>
+                    </li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li>
+                      <div>
+                          <div class="fw-bold"><a class="dropdown-item" href="#">Mike likes your post</a></div>
+                          <small class="text-muted ms-3">One minutes ago</small>
+                      </div>
+                    </li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li>
+                      <div>
+                          <div class="fw-bold"><a class="dropdown-item" href="#">Mike likes your post</a></div>
+                          <small class="text-muted ms-3">Two minutes ago</small>
+                      </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="userMenu" class="dropdown">
+                <a href="#" class="d-block link-light text-decoration-none dropdown-toggle" id="menu" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="assets/img/user.jpg" alt="mdo" width="32" height="32" class="rounded-circle me-2"> Admin
+                </a>
+                <ul class="dropdown-menu dropdown-menu-md-end text-small" aria-labelledby="menu">
+                    <li><a class="dropdown-item text-primary" href="#"><i class="fas fa-cog me-1"></i> Settings</a></li>
+                    <li><a class="dropdown-item text-primary" href="#"><i class="fas fa-user me-1"></i> Profile</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item text-primary" href="#"><i class="fas fa-sign-out-alt me-1"></i>Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- end Navbar -->
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- Sidebar -->
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <div class="position-sticky pt-3">
+
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">
+                            <i class="fas fa-home pe-2"></i>
+                            Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="collapse" href="#menuUsers" role="button" aria-expanded="false" aria-controls="menuUsers">
+                            <i class="fab fa-uikit pe-2"></i>
+                            UI Elements <i class="fas fa-caret-down ps-1"></i>
+                            </a>
+                            <div class="collapse show" id="menuUsers">
+                                <div class="list-group m-3">
+                                    <a href="alerts.html" class="list-group-item list-group-item-action"><i class="fas fa-exclamation-triangle me-2"></i> Alerts</a>
+                                    <a href="blog.html" class="list-group-item list-group-item-action"><i class="fas fa-rss me-2"></i> Blog</a>
+                                    <a href="box.html" class="list-group-item list-group-item-action"><i class="fas fa-square me-2"></i> Box</a>
+                                    <a href="buttons.html" class="list-group-item list-group-item-action"><i class="fas fa-hand-pointer me-2"></i> Buttons</a>
+                                    <a href="cards.html" class="list-group-item list-group-item-action"><i class="fas fa-address-card me-2"></i> Cards</a>
+                                    <a href="charts.html" class="list-group-item list-group-item-action"><i class="fas fa-chart-bar me-2"></i> Charts</a>
+                                    <a href="code.html" class="list-group-item list-group-item-action"><i class="fas fa-code me-2"></i> Code</a>
+                                    <a href="social.html" class="list-group-item list-group-item-action"><i class="fas fa-thumbs-up me-2"></i> Social</a>
+                                    <a href="table.html" class="list-group-item list-group-item-action active"><i class="fas fa-table me-2"></i> Table</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="collapse" href="#menuPages" role="button" aria-expanded="false" aria-controls="menuPages">
+                            <i class="far fa-copy pe-2"></i>
+                            Pages <i class="fas fa-caret-down ps-1"></i>
+                            </a>
+                            <div class="collapse" id="menuPages">
+                                <div class="list-group m-3">
+                                    <a href="contacts.html" class="list-group-item list-group-item-action"><i class="fas fa-envelope me-2"></i> Contacts</a>
+                                    <a href="forgot.html" class="list-group-item list-group-item-action"><i class="fas fa-unlock me-2"></i> Forgot</a>
+                                    <a href="login.html" class="list-group-item list-group-item-action"><i class="fas fa-key me-2"></i> Login</a>
+                                    <a href="onboard.html" class="list-group-item list-group-item-action"><i class="fas fa-user-cog me-2"></i> Onboard</a>
+                                    <a href="landing.html" class="list-group-item list-group-item-action"><i class="fas fa-user-edit me-2"></i> Landing Page</a>
+                                    <a href="register.html" class="list-group-item list-group-item-action"><i class="fas fa-sign-in-alt me-2"></i> Register</a>
+                                    <a href="error404.html" class="list-group-item list-group-item-action"><i class="fas fa-exclamation-circle me-2"></i> Error 404</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+            
+                    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                    <span>Others</span>
+                    </h6>
+
+                    <ul class="nav flex-column mb-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="forms.html">
+                            <i class="fas fa-edit pe-2"></i>
+                            Forms
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery.html">
+                            <i class="fas fa-images pe-2"></i>
+                            Gallery
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- end Sidebar -->
+        
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+
+                <!-- Breadcrumb -->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mt-3">
+                        <li class="breadcrumb-item"><a href="index.html" class="text-primary text-decoration-none">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Table</li>
+                    </ol>
+                </nav>
+                <!-- end Breadcrumb -->
+
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap pt-3 pb-2 mb-4 border-bottom">
+
+                    <div class="container-fluid p-2">
+                        <div class="row">
+
+                            <div class="col align-self-start">
+
+                                <a href="#" class="btn btn-primary btn-lg"><i class="fas fa-plus"></i> NEW</a>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row mb-2">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <!-- Table -->
+                        <div class="card box-shadow2 border-5 border-primary border-bottom-0 border-start-0 border-end-0 rounded-top mb-4">
+                            <div class="card-header p-4">
+                                <div class="input-group">
+                                    <span class="input-group-text border-end-0 bg-primary" id="input-search"><i class="fas fa-search text-white"></i></span>
+                                    <input type="text" class="form-control form-control-search border-start-0 bg-primary text-white" placeholder="Search..." aria-label="Search..." aria-describedby="input-search">
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col"><a href="#" class="text-primary text-decoration-none">#</a></th>
+                                            <th scope="col"><a href="#" class="text-primary text-decoration-none">Name</a></th>
+                                            <th scope="col"><a href="#" class="text-primary text-decoration-none">Surname</a></th>
+                                            <th scope="col"><a href="#" class="text-primary text-decoration-none">Status</a></th>
+                                            <th scope="col"><a href="#" class="text-primary text-decoration-none">Actions</a></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Max</td>
+                                            <td>Smith</td>
+                                            <td><span class="badge bg-success">Active</span></td>
+                                            <td>
+                                                <a href="#" class="btn btn-warning btn-sm"><i class="fas fa-pen"></i></a>
+                                                <a href="#" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Ray</td>
+                                            <td>Johnson</td>
+                                            <td><span class="badge bg-success">Active</span></td>
+                                            <td>
+                                                <a href="#" class="btn btn-warning btn-sm"><i class="fas fa-pen"></i></a>
+                                                <a href="#" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Luis</td>
+                                            <td>Armas</td>
+                                            <td><span class="badge bg-danger">Inactive</span></td>
+                                            <td>
+                                                <a href="#" class="btn btn-warning btn-sm"><i class="fas fa-pen"></i></a>
+                                                <a href="#" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="card-footer p-4">
+                                <nav aria-label="Page navigation">
+                                    <ul class="pagination m-0">
+                                      <li class="page-item"><a class="page-link text-primary" href="#">Previous</a></li>
+                                      <li class="page-item"><a class="page-link text-primary" href="#">1</a></li>
+                                      <li class="page-item"><a class="page-link text-primary" href="#">2</a></li>
+                                      <li class="page-item"><a class="page-link text-primary" href="#">3</a></li>
+                                      <li class="page-item"><a class="page-link text-primary" href="#">Next</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <!-- end Table -->
+                    </div>
+                </div>
+
+                <div class="row mb-2">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <!-- Table Pricing -->
+                        <div class="card-group text-center table-pricing">
+                            <div class="card">
+                                <div class="card-header bg-primary text-white">
+                                    <h3>Starter</h3>
+                                </div>
+                                <div class="card-body p-5">
+                                    <p class="card-text display-4 text-primary mb-0">$11</p>
+                                    <p class="card-text"><small class="text-muted">per month</small></p>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-striped mb-0">
+                                        <tbody>
+                                        <tr>
+                                            <td>1 Account</td>
+                                        </tr>
+                                        <tr>
+                                            <td>15GB storage</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1 Device</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="card-footer bg-primary p-3">
+                                    <button class="btn btn-light">Choose</button>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header bg-secondary text-white">
+                                    <h3>Pro</h3>
+                                </div>
+                                <div class="card-body p-5">
+                                    <p class="card-text display-4 text-secondary mb-0">$24</p>
+                                    <p class="card-text"><small class="text-muted">per month</small></p>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-striped mb-0">
+                                        <tbody>
+                                        <tr>
+                                            <td>10 Account</td>
+                                        </tr>
+                                        <tr>
+                                            <td>150GB storage</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10 Device</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="card-footer bg-secondary p-3">
+                                    <button class="btn btn-light">Choose</button>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header bg-success text-white">
+                                    <h3>Enterprise</h3>
+                                </div>
+                                <div class="card-body p-5">
+                                    <p class="card-tex display-4 text-success mb-0">$50</p>
+                                    <p class="card-text"><small class="text-muted">per month</small></p>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-striped mb-0">
+                                        <tbody>
+                                        <tr>
+                                            <td>Unlimited Account</td>
+                                        </tr>
+                                        <tr>
+                                            <td>500GB storage</td>
+                                        </tr>
+                                        <tr>
+                                            <td>100 Device</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="card-footer bg-success p-3">
+                                    <button class="btn btn-light">Choose</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end Table Pricing -->
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <div class="container">
+                    <footer class="py-3 my-4">
+                    <ul class="nav justify-content-center border-top border-bottom pt-3 mt-3 pb-3 mb-3">
+                        <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Home Page</a></li>
+                    </ul>
+                    <p class="text-center text-muted">&copy; 2022 Admin Web Kit - All rights reserved.</p>
+                    </footer>
+                </div>
+                <!-- end Footer -->
+
+            </main>
+
+        </div>
+    </div>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/core.js"></script>
+
+  </body>
+</html>

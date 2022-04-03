@@ -1,763 +1,236 @@
 <!doctype html>
-<html lang="en">
+<html>
   <head>
-
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/libs/fontawesome/css/all.min.css" rel="stylesheet">
+    <link href="assets/libs/codemirror/codemirror.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="assets/css/adminwebkit.css">
-
-    <title>AdminWebKit</title>
-
-    <link href="https://fonts.googleapis.com/css?family=Nunito|Open+Sans" rel="stylesheet">  
-    
+    <title>Admin Web Kit</title>
   </head>
   <body>
-    
-    <!-- NAVBAR -->
-    <nav class="navbar bg-primary navbar-expand-md">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img src="assets/img/logo-white.png" width="30" height="30" class="d-inline-block align-top mr-1" alt="">
-          <span class="text-white">AdminWebKit</span>
-        </a>
-        <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="fas fa-bars"></span>
+
+    <!-- Navbar -->
+    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="index.html"><img src="assets/img/icon.png" alt="mdo" width="24" height="24" class="d-inline-block align-text-top rounded-circle me-1"> Admin Web Kit</a>
+        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#">About</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown text-white" href="#" id="navbarDropdownMenuNotifications" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-bell"></i>
-                <span class="badge bg-danger align-top">1</span>
-              </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuNotifications">
-                <a class="dropdown-item" href="#"><i class="fas fa-user pr-2"></i> Mike liked a post.</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#"><i class="fas fa-comment pr-2"></i> John commented a post.</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown text-white" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <img src="assets/img/avatar.png" class="user-avatar" alt=""> Menu
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#"><i class="fas fa-envelope pr-2"></i> Inbox</a>
-                  <a class="dropdown-item" href="#"><i class="fas fa-user-cog pr-2"></i> Settings</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt pr-2"></i> Logout</a>
-                </div>
-              </li>
-          </ul>
-          <a class="btn btn-success text-white btn-sm mt-2 mb-2" type="button">Call to Action</a>
-        </div>
-    </nav>
-    <!-- end NAVBAR -->
-
-    <!-- HEADER -->
-    <div class="header p-3 mb-4">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <nav class="navbar navbar-expand-md rounded">
-              <button class="navbar-toggler btn btn-primary btn-block" type="button" data-toggle="collapse" data-target="#subNavbar" aria-controls="subNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                MENU
-              </button>
-              <div class="collapse navbar-collapse justify-content-sm-center" id="subNavbar">
-              <a class="nav-link text-primary" href="index.html"><i class="fas fa-home pr-1"></i> <span>Home</span></a>
-              <a class="nav-link text-primary" href="ui-elements.html"><i class="fas fa-th-large pr-1"></i> <span>UI Elements</span></a>
-              <div class="dropdown bg-white">
-                  <a class="nav-link nav-link-menu text-primary dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fas fa-file pr-1"></i> Pages
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="forgot.html">Forgot</a>
-                      <a class="dropdown-item" href="login.html">Login</a>
-                      <a class="dropdown-item" href="profile.html">Profile</a>
-                      <a class="dropdown-item" href="register.html">Register</a>
-                      <a class="dropdown-item" href="error.html">Error 404</a>
-                  </div>
-              </div>
-              <a class="nav-link text-primary" href="forms.html"><i class="fas fa-check-square pr-1"></i> <span>Forms</span></a>
-              <a class="nav-link text-primary" href="gallery.html"><i class="fas fa-box pr-1"></i> <span>Gallery</span></a>
+        <div id="navbar-right" class="container-fluid">
+            <div class="container-fluid">
+                <span class="navbar-text text-white">
+                    Admin template built with Bootstrap 5
+                </span>
             </div>
+            <div class="dropdown me-4">
+                <a class="d-block dropdown-toggle link-light text-decoration-none dropdown-toggle" href="#" id="notificationMenu" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-bell"></i></a>
+                <ul class="dropdown-menu dropdown-menu-md-end text-small" aria-labelledby="notificationMenu">
+                  <li><a class="dropdown-item" href="#">Mike likes your video</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li>
+                    <div class="d-flex align-items-center p-3">
+                        <div class="flex-shrink-0">
+                            <a href="#"><img width="48" src="assets/img/user.jpg" alt="User" class="rounded-circle"></a>
+                        </div>
+                        <div class="flex-grow-1 ms-2">
+                            <div class="fw-bold"><a href="#" class="dropdown-item p-0">Mike likes your photo</a></div>
+                            <small class="text-muted">One minutes ago</small>
+                        </div>
+                    </div>
+                  </li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li>
+                    <div>
+                        <div class="fw-bold"><a class="dropdown-item" href="#">Mike likes your post</a></div>
+                        <small class="text-muted ms-3">One minutes ago</small>
+                    </div>
+                  </li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li>
+                    <div>
+                        <div class="fw-bold"><a class="dropdown-item" href="#">Mike likes your post</a></div>
+                        <small class="text-muted ms-3">Two minutes ago</small>
+                    </div>
+                  </li>
+                </ul>
+            </div>
+            <div id="userMenu" class="dropdown">
+                <a href="#" class="d-block link-light text-decoration-none dropdown-toggle" id="menu" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="assets/img/user.jpg" alt="mdo" width="32" height="32" class="rounded-circle me-2"> Admin
+                </a>
+                <ul class="dropdown-menu dropdown-menu-md-end text-small" aria-labelledby="menu">
+                    <li><a class="dropdown-item text-primary" href="#"><i class="fas fa-cog me-1"></i> Settings</a></li>
+                    <li><a class="dropdown-item text-primary" href="#"><i class="fas fa-user me-1"></i> Profile</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item text-primary" href="#"><i class="fas fa-sign-out-alt me-1"></i>Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- end Navbar -->
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- Sidebar -->
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <div class="position-sticky pt-3">
+
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">
+                            <i class="fas fa-home pe-2"></i>
+                            Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="collapse" href="#menuUsers" role="button" aria-expanded="false" aria-controls="menuUsers">
+                            <i class="fab fa-uikit pe-2"></i>
+                            UI Elements <i class="fas fa-caret-down ps-1"></i>
+                            </a>
+                            <div class="collapse" id="menuUsers">
+                                <div class="list-group m-3">
+                                    <a href="alerts.html" class="list-group-item list-group-item-action"><i class="fas fa-exclamation-triangle me-2"></i> Alerts</a>
+                                    <a href="blog.html" class="list-group-item list-group-item-action"><i class="fas fa-rss me-2"></i> Blog</a>
+                                    <a href="box.html" class="list-group-item list-group-item-action"><i class="fas fa-square me-2"></i> Box</a>
+                                    <a href="buttons.html" class="list-group-item list-group-item-action"><i class="fas fa-hand-pointer me-2"></i> Buttons</a>
+                                    <a href="cards.html" class="list-group-item list-group-item-action"><i class="fas fa-address-card me-2"></i> Cards</a>
+                                    <a href="charts.html" class="list-group-item list-group-item-action"><i class="fas fa-chart-bar me-2"></i> Charts</a>
+                                    <a href="code.html" class="list-group-item list-group-item-action"><i class="fas fa-code me-2"></i> Code</a>
+                                    <a href="social.html" class="list-group-item list-group-item-action"><i class="fas fa-thumbs-up me-2"></i> Social</a>
+                                    <a href="table.html" class="list-group-item list-group-item-action"><i class="fas fa-table me-2"></i> Table</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="collapse" href="#menuPages" role="button" aria-expanded="false" aria-controls="menuPages">
+                            <i class="far fa-copy pe-2"></i>
+                            Pages <i class="fas fa-caret-down ps-1"></i>
+                            </a>
+                            <div class="collapse" id="menuPages">
+                                <div class="list-group m-3">
+                                    <a href="contacts.html" class="list-group-item list-group-item-action"><i class="fas fa-envelope me-2"></i> Contacts</a>
+                                    <a href="forgot.html" class="list-group-item list-group-item-action"><i class="fas fa-unlock me-2"></i> Forgot</a>
+                                    <a href="login.html" class="list-group-item list-group-item-action"><i class="fas fa-key me-2"></i> Login</a>
+                                    <a href="onboard.html" class="list-group-item list-group-item-action"><i class="fas fa-user-cog me-2"></i> Onboard</a>
+                                    <a href="landing.html" class="list-group-item list-group-item-action"><i class="fas fa-user-edit me-2"></i> Landing Page</a>
+                                    <a href="register.html" class="list-group-item list-group-item-action"><i class="fas fa-sign-in-alt me-2"></i> Register</a>
+                                    <a href="error404.html" class="list-group-item list-group-item-action"><i class="fas fa-exclamation-circle me-2"></i> Error 404</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+            
+                    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                    <span>Others</span>
+                    </h6>
+
+                    <ul class="nav flex-column mb-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="forms.html">
+                            <i class="fas fa-edit pe-2"></i>
+                            Forms
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery.html">
+                            <i class="fas fa-images pe-2"></i>
+                            Gallery
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
-          </div>
+            <!-- end Sidebar -->
+        
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+
+                <!-- Main Actions -->
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap pt-3 pb-2 mb-4 border-bottom">
+                    <div class="container-fluid p-2">
+                        <div class="row">
+                            <div class="col align-self-star">
+                                <div class="input-group input-group-lg">
+                                    <span class="input-group-text border-end-0 bg-white" id="input-search"><i class="fas fa-search"></i></span>
+                                    <input type="text" class="form-control border-start-0" placeholder="Search..." aria-label="Search..." aria-describedby="input-search">
+                                </div>
+                            </div>
+                            <div class="col d-flex justify-content-end">
+                                <a href="#" class="btn btn-primary btn-lg"><i class="fas fa-plus"></i> NEW</a>
+                                <button type="button" class="btn btn-link text-muted" data-bs-toggle="modal" data-bs-target="#section1"><i class="fas fa-code"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- end Main Actions -->
+
+                <!-- Section -->
+                <div class="row mb-2">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <h2>Section title <button type="button" class="btn btn-link text-muted" data-bs-toggle="modal" data-bs-target="#section2"><i class="fas fa-code"></i></button></h2>
+                        <p class="mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. <a href="#" class="text-primary">Lorem Ipsum</a> has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+                    </div>
+                </div>
+                <!-- end Section -->
+
+                <!-- Footer -->
+                <div class="container">
+                    <footer class="py-3 my-4">
+                    <ul class="nav justify-content-center border-top border-bottom pt-3 mt-3 pb-3 mb-3">
+                        <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Home Page</a></li>
+                    </ul>
+                    <p class="text-center text-muted">&copy; 2022 Admin Web Kit - All rights reserved.</p>
+                    </footer>
+                </div>
+                <!-- end Footer -->
+
+            </main>
+
         </div>
-      </div>
     </div>
-    <!-- end HEADER -->
 
-    <!-- BREADCRUMBS -->
-    <div class="container">
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="#">Home</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Page</li>
-        </ol>
-      </nav>
+    <div class="modal fade" id="section1" tabindex="-1" aria-labelledby="section" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <textarea id="code1" rows="10"></textarea>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
     </div>
-    <!-- end BREADCRUMBS -->
 
-    <!-- CARDS -->
-    <div class="container mb-4">
-
-      <div class="row">
-        <div class="col-lg-4 col-md-4 col-sm-12">
-          <!-- CARD -->
-          <div class="card mb-3 border-top border-primary">
-            <div class="card-body">
-              <h2 class="text-primary">Box Title</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <div class="modal fade" id="section2" tabindex="-1" aria-labelledby="section" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <textarea id="code2" rows="10"></textarea>
             </div>
-          </div>
-          <!-- end CARD -->
+            <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+            </div>
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-12">
-          <!-- CARD -->
-          <div class="card mb-3 border-top border-success">
-            <div class="card-body">
-              <h2 class="text-primary">Box Title</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-          </div>
-          <!-- end CARD -->
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-12">
-          <!-- CARD -->
-          <div class="card mb-3 border-top border-info">
-            <div class="card-body">
-              <h2 class="text-primary">Box Title</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-          </div>
-          <!-- end CARD -->
-        </div>
-      </div>
-
-      <div class="row">
-          <div class="col-lg-4 col-md-4 col-sm-12">
-            <!-- CARD -->
-            <div class="card card-box mb-3">
-              <div class="card-body">
-                <h2 class="text-primary">Box Title</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              </div>
-            </div>
-            <!-- end CARD -->
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-12">
-            <!-- CARD -->
-            <div class="card card-box mb-3">
-              <div class="card-body">
-                <h2 class="text-primary">Box Title</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              </div>
-            </div>
-            <!-- end CARD -->
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-12">
-            <!-- CARD -->
-            <div class="card card-box mb-3">
-              <div class="card-body">
-                <h2 class="text-primary">Box Title</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              </div>
-            </div>
-            <!-- end CARD -->
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-4 col-sm-12">
-            <div class="card mb-3">
-                <!-- CARD -->
-                <div class="card-body text-center pb-2">
-                  <div class="h1 m-0 p-0 text-primary">14</div>
-                  <p class="text-muted">new items</p>
-                </div>
-                <!-- end CARD -->
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-12">
-            <!-- CARD -->
-            <div class="card mb-3">
-              <div class="card-body text-center pb-2">
-                <div class="h1 m-0 p-0 text-success">32</div>
-                <p class="text-muted">new items</p>
-              </div>
-            </div>
-            <!-- end CARD -->
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-12">
-            <!-- CARD -->
-            <div class="card mb-3">
-              <div class="card-body text-center pb-2">
-                <div class="h1 m-0 p-0 text-secondary">54</div>
-                <p class="text-muted">new items</p>
-              </div>
-            </div>
-            <!-- end CARD -->
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-4 col-sm-12">
-            <!-- CARD -->
-            <div class="card mb-3">
-                <div class="card-body text-center pb-2">
-                  <a href="#" class="text-primary">
-                    <div class="h1 m-0 p-0"><i class="fas fa-users"></i></div>
-                    <p class="text-muted">Users</p>
-                  </a>
-                </div>
-            </div>
-            <!-- end CARD -->
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-12">
-            <!-- CARD -->
-            <div class="card mb-3">
-              <div class="card-body text-center pb-2">
-                <a href="#" class="text-primary">
-                  <div class="h1 m-0 p-0"><i class="fas fa-users"></i></div>
-                  <p class="text-muted">Users</p>
-                </a>
-              </div>
-            </div>
-            <!-- end CARD -->
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-12">
-            <!-- CARD -->
-            <div class="card mb-3">
-              <div class="card-body text-center pb-2">
-                <a href="#" class="text-primary">
-                  <div class="h1 m-0 p-0"><i class="fas fa-users"></i></div>
-                  <p class="text-muted">Users</p>
-                </a>
-              </div>
-            </div>
-            <!-- end CARD -->
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-4 col-sm-12">
-            <!-- CARD -->
-            <div class="card mb-3 border-left border-primary">
-              <div class="card-body text-center pb-2">
-                <a href="#" class="text-primary">
-                  <div class="d-flex align-items-center pb-2">
-                    <span class="mr-3">
-                      <i class="fas fa-user fa-3x"></i>
-                    </span>
-                    <div class="text-left">
-                      <h3 class="m-0 text-primary">3 <small>new users</small></h3>
-                      <small class="text-muted">12 users</small>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <!-- end CARD -->
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-12">
-            <!-- CARD -->
-            <div class="card mb-3 border-left border-success">
-              <div class="card-body text-center pb-2">
-                <a href="#" class="text-success">
-                  <div class="d-flex align-items-center pb-2">
-                    <span class="mr-3">
-                      <i class="fas fa-file fa-3x"></i>
-                    </span>
-                    <div class="text-left">
-                      <h3 class="m-0">5 <small>new files</small></h3>
-                      <small class="text-muted">21 files</small>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <!-- end CARD -->
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-12">
-            <!-- CARD -->
-            <div class="card mb-3 border-left border-secondary">
-              <div class="card-body text-center pb-2">
-                <a href="#" class="text-secondary">
-                  <div class="d-flex align-items-center pb-2">
-                    <span class="mr-3">
-                      <i class="fas fa-thumbs-up fa-3x"></i>
-                    </span>
-                    <div class="text-left">
-                      <h3 class="m-0">9 <small>new likes</small></h3>
-                      <small class="text-muted">18 likes</small>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <!-- end CARD -->
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-4 col-sm-12">
-            <!-- CARD -->
-            <div class="card mb-3 border-left border-primary">
-              <div class="card-header bg-white text-center pb-2">
-                <a href="#" class="text-primary">
-                  <div class="d-flex align-items-center pb-2">
-                    <img src="assets/img/user.jpg" width="48" class="rounded-circle mr-3">
-                    <div class="text-left">
-                      <h3 class="m-0"><small>John Doe</small></h3>
-                      <small class="text-muted">Web Developer</small>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <ul class="list-group list-group-flush text-primary">
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                  <a href="#"><small>Followers</small></a>
-                  <span class="badge bg-primary text-white badge-pill">1229</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                  <a href="#"><small>Following</small></a>
-                  <span class="badge bg-primary text-white badge-pill">876</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                  <a href="#"><small>Posts</small></a>
-                  <span class="badge bg-primary text-white badge-pill">1281</span>
-                </li>
-              </ul>
-            </div>
-            <!-- end CARD -->
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-12">
-            <!-- CARD -->
-            <div class="card mb-3 border-left border-success">
-              <div class="card-header bg-white text-center pb-2">
-                <a href="#" class="text-success">
-                  <div class="d-flex align-items-center pb-2">
-                    <img src="assets/img/user.jpg" width="48" class="rounded-circle mr-3">
-                    <div class="text-left">
-                      <h3 class="m-0"><small>John Doe</small></h3>
-                      <small class="text-muted">Web Developer</small>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <ul class="list-group list-group-flush text-success">
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                  <a href="#"><small>Followers</small></a>
-                  <span class="badge bg-success text-white badge-pill">1229</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                  <a href="#"><small>Following</small></a>
-                  <span class="badge bg-success text-white badge-pill">876</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                  <a href="#"><small>Posts</small></a>
-                  <span class="badge bg-success text-white badge-pill">1281</span>
-                </li>
-              </ul>
-            </div>
-            <!-- end CARD -->
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-12">
-            <!-- CARD -->
-            <div class="card mb-3 border-left border-secondary">
-              <div class="card-header bg-white text-center pb-2">
-                <a href="#" class="text-secondary">
-                  <div class="d-flex align-items-center pb-2">
-                    <img src="assets/img/user.jpg" width="48" class="rounded-circle mr-3">
-                    <div class="text-left">
-                      <h3 class="m-0"><small>John Doe</small></h3>
-                      <small class="text-muted">Web Developer</small>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <ul class="list-group list-group-flush text-secondary">
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                  <a href="#"><small>Followers</small></a>
-                  <span class="badge bg-secondary text-white badge-pill">1229</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                  <a href="#"><small>Following</small></a>
-                  <span class="badge bg-secondary text-white badge-pill">876</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                  <a href="#"><small>Posts</small></a>
-                  <span class="badge bg-secondary text-white badge-pill">1281</span>
-                </li>
-              </ul>
-            </div>
-            <!-- end CARD -->
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-4 col-sm-12">
-            <!-- CARD -->
-            <div class="card mb-3 border-left border-primary">
-              <div class="card-body text-center pb-2">
-                <a href="#" class="text-primary">
-                  <div class="d-flex align-items-center pb-2">
-                    <img src="assets/img/user.jpg" width="48" class="rounded-circle mr-3">
-                    <div class="text-left">
-                      <h3 class="m-0"><small>John Doe</small></h3>
-                      <small class="text-muted">3 days ago</small>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <!-- end CARD -->
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-12">
-            <!-- CARD -->
-            <div class="card mb-3 border-left border-success">
-              <div class="card-body text-center pb-2">
-                <a href="#" class="text-success">
-                  <div class="d-flex align-items-center pb-2">
-                    <img src="assets/img/user.jpg" width="48" class="rounded-circle mr-3">
-                    <div class="text-left">
-                      <h3 class="m-0"><small>John Doe</small></h3>
-                      <small class="text-muted">3 days ago</small>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <!-- end CARD -->
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-12">
-            <!-- CARD -->
-            <div class="card mb-3 border-left border-secondary">
-              <div class="card-body text-center pb-2">
-                <a href="#" class="text-secondary">
-                  <div class="d-flex align-items-center pb-2">
-                    <img src="assets/img/user.jpg" width="48" class="rounded-circle mr-3">
-                    <div class="text-left">
-                      <h3 class="m-0"><small>John Doe</small></h3>
-                      <small class="text-muted">3 days ago</small>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <!-- end CARD -->
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-4 col-sm-12">
-            <!-- CARD -->
-            <div class="card mb-3">
-              <a href="#"><img class="card-img-top" src="assets/img/computer.jpg" alt="Image"></a>
-              <div class="card-body">
-                <h2 class="text-primary"><a href="#">Post title</a></h2>
-                <p class="card-text mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="text-primary">
-                  <div class="d-flex align-items-center pb-2">
-                    <img src="assets/img/user.jpg" width="48" class="rounded-circle mr-3">
-                    <div class="text-left">
-                      <h3 class="m-0"><small>John Doe</small></h3>
-                      <small class="text-muted">3 days ago</small>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <!-- end CARD -->
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-12">
-            <!-- CARD -->
-            <div class="card mb-3">
-              <a href="#"><img class="card-img-top" src="assets/img/computer.jpg" alt="Image"></a>
-              <div class="card-body">
-                <h2 class="text-primary"><a href="#">Post title</a></h2>
-                <p class="card-text mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="text-primary">
-                  <div class="d-flex align-items-center pb-2">
-                    <img src="assets/img/user.jpg" width="48" class="rounded-circle mr-3">
-                    <div class="text-left">
-                      <h3 class="m-0"><small>John Doe</small></h3>
-                      <small class="text-muted">3 days ago</small>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <!-- end CARD -->
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-12">
-            <!-- CARD -->
-            <div class="card mb-3">
-              <a href="#"><img class="card-img-top" src="assets/img/computer.jpg" alt="Image"></a>
-              <div class="card-body">
-                <h2 class="text-primary"><a href="#">Post title</a></h2>
-                <p class="card-text mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="text-primary">
-                  <div class="d-flex align-items-center pb-2">
-                    <img src="assets/img/user.jpg" width="48" class="rounded-circle mr-3">
-                    <div class="text-left">
-                      <h3 class="m-0"><small>John Doe</small></h3>
-                      <small class="text-muted">3 days ago</small>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <!-- end CARD -->
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-4 col-sm-12">
-            <!-- CARD -->
-            <div class="card mb-3">
-              <a href="#"><img class="card-img-top" src="assets/img/computer.jpg" alt="Image"></a>
-              <div class="card-body">
-                <h2 class="text-primary"><a href="#">Post title</a></h2>
-                <p class="card-text mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <div class="text-right">
-                  <ul class="list-inline">
-                    <li class="list-inline-item"><a href="#"><i class="fa fa-heart"></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class="fa fa-comment"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <!-- end CARD -->
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-12">
-            <!-- CARD -->
-            <div class="card mb-3">
-              <a href="#"><img class="card-img-top" src="assets/img/computer.jpg" alt="Image"></a>
-              <div class="card-body">
-                <h2 class="text-primary"><a href="#">Post title</a></h2>
-                <p class="card-text mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <div class="text-right">
-                  <ul class="list-inline">
-                    <li class="list-inline-item"><a href="#"><i class="fa fa-heart"></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class="fa fa-comment"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <!-- end CARD -->
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-12">
-            <!-- CARD -->
-            <div class="card mb-3">
-              <a href="#"><img class="card-img-top" src="assets/img/computer.jpg" alt="Image"></a>
-              <div class="card-body">
-                <h2 class="text-primary"><a href="#">Post title</a></h2>
-                <p class="card-text mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <div class="text-right">
-                  <ul class="list-inline">
-                    <li class="list-inline-item"><a href="#"><i class="fa fa-heart"></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class="fa fa-comment"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <!-- end CARD -->
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-            <!-- CARD -->
-            <div class="card mb-3">
-              <div class="card-body">
-                <div class="media">
-                  <a href="#"><img class="mr-3" width="200" src="assets/img/computer.jpg" alt="Image"></a>
-                  <div class="media-body">
-                    <h2 class="text-primary"><a href="#">Post title</a></h2>
-                    <p class="card-text mb-2">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="text-right">
-                      <ul class="list-inline">
-                        <li class="list-inline-item"><a href="#"><i class="fa fa-heart"></i></a></li>
-                        <li class="list-inline-item"><a href="#"><i class="fa fa-comment"></i></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- end CARD -->
-          </div>
-          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-            <!-- CARD -->
-            <div class="card mb-3">
-              <div class="card-body">
-                <div class="media">
-                  <a href="#"><img class="mr-3" width="200" src="assets/img/computer.jpg" alt="Image"></a>
-                  <div class="media-body">
-                    <h2 class="text-primary"><a href="#">Post title</a></h2>
-                    <p class="card-text mb-2">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="text-right">
-                      <ul class="list-inline">
-                        <li class="list-inline-item"><a href="#"><i class="fa fa-heart"></i></a></li>
-                        <li class="list-inline-item"><a href="#"><i class="fa fa-comment"></i></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- end CARD -->
-          </div>
-        </div>
-
     </div>
-    <!-- end CARDS -->
 
-    <!-- LISTS -->
-    <div class="container mb-4">
-      <div class="row">
-        <div class="col-lg-4 col-md-4 col-sm-12">
-          <!-- LIST -->
-          <ul class="list-group rounded-top rounded-bottom text-primary mb-3 border-top border-primary">
-            <li class="list-group-item"><i class="fas fa-users pr-2"></i> new users</li>
-            <li class="list-group-item"><i class="fas fa-file pr-2"></i> new files</li>
-            <li class="list-group-item"><i class="fas fa-heart pr-2"></i> new likes</li>
-            <li class="list-group-item"><i class="fas fa-comments pr-2"></i> new comments</li>
-          </ul>
-          <!-- end LIST -->
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-12">
-          <!-- LIST -->
-          <ul class="list-group rounded-top rounded-bottom text-secondary mb-3 border-top border-secondary">
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              new users
-              <span class="badge bg-secondary text-white badge-pill">14</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              new files
-              <span class="badge bg-secondary text-white badge-pill">11</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              new likes
-              <span class="badge bg-secondary text-white badge-pill">4</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              new comments
-              <span class="badge bg-secondary text-white badge-pill">5</span>
-            </li>
-          </ul>
-          <!-- end LIST -->
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-12">
-          <!-- LIST -->
-          <ul class="list-group rounded-top rounded-bottom text-primary mb-3 border-top border-primary">
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              <div><i class="fas fa-users pr-2"></i> new users</div>
-              <span class="badge bg-primary text-white badge-pill">14</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              <div><i class="fas fa-file pr-2"></i> new files</div>
-              <span class="badge bg-primary text-white badge-pill">11</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              <div><i class="fas fa-heart pr-2"></i> new likes</div>
-              <span class="badge bg-primary text-white badge-pill">4</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              <div><i class="fas fa-comments pr-2"></i> new comments</div>
-              <span class="badge bg-primary text-white badge-pill">5</span>
-            </li>
-          </ul>
-          <!-- end LIST -->
-        </div>
-      </div>
-    </div>
-    <!-- end LISTS -->
-
-    <!-- TABLE -->
-    <div class="container mb-4">
-      <div class="card card-table border-top border-primary">
-        <div class="card-header bg-white">
-          <div class="form-group row">
-            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-              Table
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-              <input class="form-control form-control-sm" type="text" placeholder="Search...">
-            </div>
-          </div>
-        </div>
-        <div class="table-responsive">
-          <table class="table table-hover">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Name</th>
-                <th scope="col">Created</th>
-                <th scope="col">Status</th>
-                <th scope="col">Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row" class="text-muted">3</th>
-                <td>Mike</td>
-                <td>3 days ago</td>
-                <td><span class="badge badge-success">Active</span></td>
-                <td>
-                  <a href="#" class="btn btn-primary btn-sm mr-1 mb-1"><i class="fas fa-edit"></i></a>
-                  <a href="#" class="btn btn-danger btn-sm mr-1 mb-1"><i class="far fa-trash-alt"></i></a>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row" class="text-muted">2</th>
-                <td>John</td>
-                <td>3 days ago</td>
-                <td><span class="badge badge-primary">Inactive</span></td>
-                <td>
-                  <a href="#" class="btn btn-primary btn-sm mr-1 mb-1"><i class="fas fa-edit"></i></a>
-                  <a href="#" class="btn btn-danger btn-sm mr-1 mb-1"><i class="far fa-trash-alt"></i></a>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row" class="text-muted">1</th>
-                <td>Mark</td>
-                <td>2 days ago</td>
-                <td><span class="badge badge-primary">Inactive</span></td>
-                <td>
-                  <a href="#" class="btn btn-primary btn-sm mr-1 mb-1"><i class="fas fa-edit"></i></a>
-                  <a href="#" class="btn btn-danger btn-sm mr-1 mb-1"><i class="far fa-trash-alt"></i></a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-    <!-- end TABLE -->
-
-    <!-- FOOTER -->
-    <footer class="footer bg-white">
-      <div class="container">
-        <span class="text-muted">&copy; 2018 AdminWebKit - All rights reserved.</span>
-      </div>
-    </footer>
-    <!-- end FOOTER -->
-
-    <script src="assets/plugins/jquery-3.3.1.slim.min.js"></script>
-    <script src="assets/plugins/popper.min.js"></script>
-    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- CodeMirror -->
+    <script src="assets/libs/codemirror/codemirror.min.js"></script>
+    <script src="assets/libs/codemirror/javascript.min.js"></script>
+    <script src="assets/libs/codemirror/htmlmixed.min.js"></script>
+    <script src="assets/libs/codemirror/xml.min.js"></script>
+    <script src="assets/libs/codemirror/css.min.js"></script>
+    <script src="assets/libs/codemirror/clike.min.js"></script>
+    <script src="assets/libs/codemirror/autorefresh.js"></script>
+    <script src="assets/libs/codemirror/pages/index.js"></script>
+    <!-- end CodeMirror -->
+    <script src="assets/js/core.js"></script>
 
   </body>
 </html>
