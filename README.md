@@ -1,6 +1,6 @@
 # AdminWebKit
 
-Clean and Responsive Admin Panel Template. Get for free reusable components and high quality UI built on top of Bootstrap 4.
+Clean and Responsive Admin Panel Template. Get for free reusable components and high quality UI built on top of Bootstrap 5.
 
 # Author
 
